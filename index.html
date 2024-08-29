@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        .content-box {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4CAF50; /* Default: Green */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .square-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #2196F3; /* Blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .square:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        @media (max-width: 768px) {
+            .content-box {
+                background-color: #FF9800; /* Orange */
+                padding: 15px;
+            }
+            .square-container {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 375px) {
+            .content-box {
+                background-color: #f44336; /* Red */
+                padding: 10px;
+            }
+            .square-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Design Example</h1>
+    <div class="content-box">
+        <p>هذا مثال على تصميم متجاوب. يمكنك تغيير حجم نافذة المتصفح لرؤية التغييرات في التصميم.</p>
+        <div class="square-container">
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+        </div>
+    </div>
+</body>
+</html>
